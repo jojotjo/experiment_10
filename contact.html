@@ -20,7 +20,7 @@
         }
 
         body {
-            background: rgb(232, 9, 9);
+            background: rgb(0, 0, 0);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -35,9 +35,13 @@
         .social-media a {
             color: white;
             font-size: 2rem;
-            
 
 
+
+        }
+
+        .iconcolor:hover {
+            color: crimson;
         }
 
         /* .content {
@@ -137,97 +141,96 @@
                         </div>
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
 
-                                <!-- Name Input -->
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="name" type="text" placeholder="Name"
-                                        data-sb-validations="required" />
-                                    <label for="name">Name</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.
-                                    </div>
+                            <!-- Name Input -->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Name"
+                                    data-sb-validations="required" />
+                                <label for="name">Name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.
                                 </div>
+                            </div>
 
-                                <!-- Email Input -->
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="emailAddress" type="email"
-                                        placeholder="Email Address" data-sb-validations="required,email" />
-                                    <label for="emailAddress">Email Address</label>
-                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email
-                                        Address
-                                        is
-                                        required.</div>
-                                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email
-                                        Address
-                                        Email
-                                        is not valid.</div>
+                            <!-- Email Input -->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
+                                    data-sb-validations="required,email" />
+                                <label for="emailAddress">Email Address</label>
+                                <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email
+                                    Address
+                                    is
+                                    required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email
+                                    Address
+                                    Email
+                                    is not valid.</div>
+                            </div>
+
+                            <!-- Message Input -->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Message"
+                                    style="height: 10rem;" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Message is
+                                    required.
                                 </div>
+                            </div>
 
-                                <!-- Message Input -->
-                                <div class="form-floating mb-3">
-                                    <textarea class="form-control" id="message" type="text" placeholder="Message"
-                                        style="height: 10rem;" data-sb-validations="required"></textarea>
-                                    <label for="message">Message</label>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required">Message is
-                                        required.
-                                    </div>
+                            <!-- Submit success message -->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    <p>To activate this form, sign up at</p>
+                                    <a href="https://startbootstrap.com/solution/contact-forms"></a>
                                 </div>
+                            </div>
 
-                                <!-- Submit success message -->
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                        <p>To activate this form, sign up at</p>
-                                        <a
-                                            href="https://startbootstrap.com/solution/contact-forms"></a>
-                                    </div>
-                                </div>
+                            <!-- Submit error message -->
+                            <div class="d-none" id="submitErrorMessage">
+                                <div class="text-center text-danger mb-3">Error sending message!</div>
+                            </div>
 
-                                <!-- Submit error message -->
-                                <div class="d-none" id="submitErrorMessage">
-                                    <div class="text-center text-danger mb-3">Error sending message!</div>
-                                </div>
-
-                               <!--modal-->
-                                <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
-                                    aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalToggleLabel">thank you</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                thank you for contact with me , check the email to confirm the
-                                                verification
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
-                                                    data-bs-toggle="modal" data-bs-dismiss="modal">back</button>
-                                            </div>
+                            <!--modal-->
+                            <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                                aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalToggleLabel">thank you</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            thank you for contact with me , check the email to confirm the
+                                            verification
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                                data-bs-toggle="modal" data-bs-dismiss="modal">back</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
-                                    aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalToggleLabel2">connect</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                click button back
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
-                                                    data-bs-toggle="modal" data-bs-dismiss="modal"></button>Back
-                                            </div>
+                            </div>
+                            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                                aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalToggleLabel2">connect</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            click button back
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
+                                                data-bs-toggle="modal" data-bs-dismiss="modal"></button>Back
                                         </div>
                                     </div>
                                 </div>
-                                <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle"
-                                    role="button">Submit</a>
+                            </div>
+                            <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle"
+                                role="button">Submit</a>
                         </form>
                         <!-- End of contact form -->
 
@@ -238,46 +241,45 @@
             </div>
         </div>
     </div>
-    
+
 
     <div class="singleCol social-media d-flex justify-content-evenly">
         <!-- Facebook -->
-        <a href="https://www.facebook.com/">
+        <a class="iconcolor" href="https://www.facebook.com/">
             <i class="fa-brands fa-facebook"></i></a>
 
-            <!-- Twitter -->
-            <a href=" https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-
+        <!-- Twitter -->
+        <a class="iconcolor" href=" https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
 
         <!-- Google -->
-        <a href="https://www.google.com/"><i class="fa-brands fa-google"></i></a>
+        <a class="iconcolor" href="https://www.google.com/"><i class="fa-brands fa-google"></i></a>
 
         <!-- Instagram -->
-        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a class="iconcolor" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
 
         <!-- Linkedin -->
-        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        <a class="iconcolor" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
 
         <!-- Pinterest -->
-        <a href="https://in.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+        <a class="iconcolor" href="https://in.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
 
         <!-- Stack overflow -->
-        <a href="https://stackoverflow.com/"><i class="fa-brands fa-stack-overflow"></i></a>
+        <a class="iconcolor" href="https://stackoverflow.com/"><i class="fa-brands fa-stack-overflow"></i></a>
 
         <!-- Youtube -->
-        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        <a class="iconcolor" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
 
         <!-- Slack -->
-        <a href="https://slack.com/"><i class="fa-brands fa-slack"></i></a>
+        <a class="iconcolor" href="https://slack.com/"><i class="fa-brands fa-slack"></i></a>
 
         <!-- Github -->
-        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+        <a class="iconcolor" href="https://github.com/"><i class="fa-brands fa-github"></i></a>
 
         <!-- Reddit -->
-        <a href="https://www.reddit.com/"><i class="fa-brands fa-reddit"></i></a>
+        <a class="iconcolor" href="https://www.reddit.com/"><i class="fa-brands fa-reddit"></i></a>
 
         <!-- Whatsapp -->
-        <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+        <a class="iconcolor" href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
 
 
